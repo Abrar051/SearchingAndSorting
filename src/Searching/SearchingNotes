@@ -14,3 +14,8 @@ Steps for binary searching
     Middle = (1st + last) /2
 2 : if item is less than middle cut the other part of middle and search on the left side of middle
 3 : if greater than cut left side and search in right side
+
+
+Algorithm for merging sort
+
+
