@@ -1,0 +1,16 @@
+Searching 2 types
+1 linear searching
+2 binary searching
+
+Linear searching time complexity
+(1+2+3+4+......+n)/n
+
+Binary searching precondition
+The array or linked list must be arranged in ascending or descending order
+
+
+Steps for binary searching
+1 : At first in binary search middle element is iterate
+    Middle = (1st + last) /2
+2 : if item is less than middle cut the other part of middle and search on the left side of middle
+3 : if greater than cut left side and search in right side
