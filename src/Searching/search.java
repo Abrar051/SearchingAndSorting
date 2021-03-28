@@ -33,6 +33,8 @@ public class search {
         }
     }
 
+
+
     public int binarySearchRecursion(int x)
     {
         int first = 0, last = array.length - 1;
