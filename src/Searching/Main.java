@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
         int array[] = {12,32,62,72,83,95,21,34,45,57,100,122,116};
         search search = new search(array);
-        Sort selectionSort = new Sort(array);
-        Sort insertionSort = new Sort(array);
+        SelectionSort selectionSort = new SelectionSort(array);
+        InsertionSort insertionSort = new InsertionSort(array);
         Sort heapSort = new Sort(array);
         Sort mergeSort = new Sort(array);
         Sort quickSort = new Sort(array);
