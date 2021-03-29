@@ -9,21 +9,6 @@ public class SelectionSort {
             this.array = array;
         }
 
-        public void mergeSort(int array[]) {
-            int n = array.length;
-
-            for (int i = 0; i < n - 1; i++) {
-                int minimum = i;
-                for (int j = i + 1; j < n; j++)
-                    if (array[j] < array[minimum])
-                        minimum = j;
-
-                int temp = array[minimum];
-                array[minimum] = array[i];
-                array[i] = temp;
-            }
-        }
-
         void printArray() {
             int n = array.length;
             System.out.println("Sorted array is : ");
