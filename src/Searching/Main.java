@@ -25,5 +25,7 @@ public class Main {
         heapSort.mergeSort();
         heapSort.printArray();
         //merge sort
+        mergeSort.mergeSort(array,0, array.length-1);
+        mergeSort.printArray();
     }
 }

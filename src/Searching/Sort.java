@@ -96,14 +96,14 @@ public class Sort {
         int L[] = new int[n1];//temporary arrays
         int R[] = new int[n2];
 
-        for (int i = 0; i < n1; ++i)//copy data to temp arrays
+        for (int i = 0; i < n1; i++)//copy data to temp arrays
             L[i] = array[l + i];
-        for (int j = 0; j < n2; ++j)
+        for (int j = 0; j < n2; j++)
             R[j] = array[m + 1 + j];
 
         int i = 0, j = 0;    /* Merge the temp arrays */
         int k = l;  // Initial indexes of first and second subArrays
-        while (i < n1 && j < n2) {
+        while (i < n1 & j < n2) {
             if (L[i] <= R[j]) {
                 array[k] = L[i];
                 i++;
