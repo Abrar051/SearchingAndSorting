@@ -8,6 +8,7 @@ public class Main {
         Sort insertionSort = new Sort(array);
         Sort heapSort = new Sort(array);
         Sort mergeSort = new Sort(array);
+        Sort quickSort = new Sort(array);
         search.sort();
         for (int i=0;i<array.length;i++)
         {
@@ -27,5 +28,10 @@ public class Main {
         //merge sort
         mergeSort.mergeSort(array,0, array.length-1);
         mergeSort.printArray();
+
+        //quick sort
+        quickSort.quickSort(0, array.length-1);
+        quickSort.printArray();
+
     }
 }

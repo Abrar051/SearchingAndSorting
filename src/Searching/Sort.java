@@ -89,37 +89,37 @@ public class Sort {
         }
     }
 
-    void merge(int l, int m, int r) {
+    public void merge(int l, int m, int r) {
         int n1 = m - l + 1; // 2 subarray merge sort length
         int n2 = r - m;
 
-        int L[] = new int[n1];//temporary arrays
-        int R[] = new int[n2];
+        int left[] = new int[n1];//temporary arrays
+        int right[] = new int[n2];
 
         for (int i = 0; i < n1; i++)//copy data to temp arrays
-            L[i] = array[l + i];
+            left[i] = array[l + i];
         for (int j = 0; j < n2; j++)
-            R[j] = array[m + 1 + j];
+            right[j] = array[m + 1 + j];
 
-        int i = 0, j = 0;    /* Merge the temp arrays */
+        int i = 0, j = 0;
         int k = l;  // Initial indexes of first and second subArrays
         while (i < n1 & j < n2) {
-            if (L[i] <= R[j]) {
-                array[k] = L[i];
+            if (left[i] <= right[j]) {
+                array[k] = left[i];
                 i++;
             } else {
-                array[k] = R[j];
+                array[k] = right[j];
                 j++;
             }
             k++;
         }
         while (i < n1) {
-            array[k] = L[i];
+            array[k] = left[i];
             i++;
             k++;
         }
         while (j < n2) {
-            array[k] = R[j];
+            array[k] = right[j];
             j++;
             k++;
         }
@@ -136,4 +136,35 @@ public class Sort {
     }
 
 
+    //quick sort
+
+    public void swap(int[] array, int i, int j) {
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+
+    public int partition(int low, int high) {
+
+        // pivot
+        int pivot = array[high];
+        int i = (low - 1); //define the counter from the left side of the pivot
+
+        for (int j = low; j <= high - 1; j++) {
+            if (array[j] < pivot) {
+                i++;
+                swap(array, i, j);
+            }
+        }
+        swap(array, i + 1, high);
+        return (i + 1);
+    }
+
+    public void quickSort(int low, int high) {
+        if (low < high) {
+            int pi = partition(low, high);
+            quickSort(low, pi - 1);
+            quickSort(pi + 1, high);
+        }
+    }
 }
