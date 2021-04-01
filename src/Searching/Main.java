@@ -6,9 +6,7 @@ public class Main {
         search search = new search(array);
         SelectionSort selectionSort = new SelectionSort(array);
         InsertionSort insertionSort = new InsertionSort(array);
-        Sort heapSort = new Sort(array);
-        Sort mergeSort = new Sort(array);
-        Sort quickSort = new Sort(array);
+        HeapSort heapSort = new HeapSort(array);
         search.sort();
         for (int i=0;i<array.length;i++)
         {
@@ -17,21 +15,10 @@ public class Main {
         System.out.println();
         search.binarySearch(12);
         //selection sort
-        selectionSort.selectionSort();
         selectionSort.printArray();
-        //insertion sort
-        insertionSort.insertionSort();
         insertionSort.printArray();
-        //heap sort
-        heapSort.mergeSort();
         heapSort.printArray();
-        //merge sort
-        mergeSort.mergeSort(array,0, array.length-1);
-        mergeSort.printArray();
 
-        //quick sort
-        quickSort.quickSort(0, array.length-1);
-        quickSort.printArray();
 
     }
 }
